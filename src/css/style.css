@@ -63,6 +63,11 @@ h3 {
   background-size: cover
 }
 
+.header-content {
+  height: inherit;
+  margin: 0 auto;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -78,6 +83,7 @@ h3 {
 .title-container {
   width: 100%;
   height: 100%;
+  max-width: 340px;
   display: grid;
   place-items: center;
 }
@@ -87,7 +93,7 @@ h3 {
   border: 2px solid var(--White);
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 2.2rem;
+  font-size: 2.2em;
   font-weight: 300;
   color: var(--White);
 }
@@ -115,7 +121,11 @@ h3 {
   justify-content: space-between;
 }
 
-.menu {
+.desktop-menu {
+  display: none;
+}
+
+.drop-menu {
   width: 100%;
   height: 100%;
   display: flex;
@@ -130,7 +140,7 @@ h3 {
   text-decoration: none;
   text-transform: uppercase;
   font-family: 'Josefin Sans';
-  font-size: 1.6rem;
+  font-size: 1.6em;
 }
 
 .menu-link:hover {
@@ -156,7 +166,7 @@ h3 {
   color: var(--Black);
   font-family: 'Josefin Sans';
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 2em;
   font-weight: 300;
 }
 
@@ -164,6 +174,28 @@ h3 {
   max-width: 90%;
   margin: 0 auto;
   color: var(--Dark-Gray);
+}
+
+.card-container {
+  display: grid;
+  gap: 20px;
+}
+
+.card-picture {
+  position: relative;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-title {
+  width: 120px;
+  text-align: left;
+  color: var(--White);
+  text-transform: uppercase;
+  font-weight: 400;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
 }
 
 .btn {
@@ -208,7 +240,7 @@ h3 {
   text-transform: capitalize;
 }
 
-.menu-item-link {
+.icon-menu-link {
   color: var(--White);
   text-decoration: none;
 }
@@ -217,4 +249,52 @@ h3 {
   display: flex;
   justify-content: center;
   gap: 20px;
+}
+
+@media (min-width: 752px) {
+  body {
+    font-size: 22px;
+  }
+
+  .header {
+    height: 70vh;
+    background-image: url(../../images/desktop/image-hero.jpg);
+  }
+
+  .header-content {
+    max-width: 80%;
+  }
+
+  .title-container {
+    max-width: 450px;
+  }
+
+  .logo {
+    width: 200px;
+  }
+
+  .open-close-btn {
+    display: none;
+  }
+
+  .desktop-menu {
+    display: flex;
+    gap: 20px;
+  }
+
+  .menu-link {
+    text-transform: capitalize;
+    font-size: 1em;
+    font-weight: 700;
+  }
+
+  .container {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .card-container {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

@@ -1,22 +1,19 @@
+import { cardTemplate } from "./constants.js";
+import { manageDropMenu, useFetch, setCardsOnScreenChange } from "./utils.js";
+
+const cardContainer = document.querySelector('.card-container');
 const openCloseBtn = document.querySelectorAll('.open-close-btn');
 const dropMenu = document.querySelector('.dropdown-menu');
 const menuLinks = document.querySelectorAll('.menu-link');
 
-function toggleMenu() {
-  dropMenu.classList.toggle('show-menu');
-  document.body.classList.toggle('lock-body');
-  window.scrollTo(0, 0);
-}
+const path = 'src/json/creationData.json';
+const cardData = await useFetch(path);
+const mobileData = cardData.mobile
+const desktopData = cardData.desktop
 
-function closeMenu() {
-  dropMenu.classList.remove('show-menu');
-  document.body.classList.remove('lock-body');
-}
+manageDropMenu(openCloseBtn, menuLinks, dropMenu);
+setCardsOnScreenChange(mobileData, desktopData, cardContainer, cardTemplate);
 
-openCloseBtn.forEach(btn => {
-  btn.addEventListener('click', toggleMenu)
-})
-
-menuLinks.forEach(link => {
-  link.addEventListener('click', closeMenu)
-})
+window.addEventListener('resize', () => {
+  setCardsOnScreenChange(mobileData, desktopData, cardContainer, cardTemplate);
+});
