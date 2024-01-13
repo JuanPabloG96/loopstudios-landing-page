@@ -1,8 +1,86 @@
 {
   "mobile": [
     {
-      "src": "images/mobile/image-deep-earth"
+      "id": 1,
+      "src": "images/mobile/image-deep-earth",
+      "content": "deep earth"
+    },
+    {
+      "id": 2,
+      "src": "images/mobile/image-night-arcade",
+      "content": "night arcade"
+    },
+    {
+      "id": 3,
+      "src": "images/mobile/image-soccer-team",
+      "content": "soccer team vr"
+    },
+    {
+      "id": 4,
+      "src": "images/mobile/image-grid",
+      "content": "the grid"
+    },
+    {
+      "id": 5,
+      "src": "images/mobile/image-from-above",
+      "content": "from up above vr"
+    },
+    {
+      "id": 6,
+      "src": "images/mobile/image-pocket-borealis",
+      "content": "pocket borealis"
+    },
+    {
+      "id": 7,
+      "src": "images/mobile/image-curiosity",
+      "content": "the curiosity"
+    },
+    {
+      "id": 8,
+      "src": "images/mobile/image-fisheye",
+      "content": "make it fisheye"
     }
   ],
-  "desktop": []
+  "desktop": [
+    {
+      "id": 1,
+      "src": "images/desktop/image-deep-earth",
+      "content": "deep earth"
+    },
+    {
+      "id": 2,
+      "src": "images/desktop/image-night-arcade",
+      "content": "night arcade"
+    },
+    {
+      "id": 3,
+      "src": "images/desktop/image-soccer-team",
+      "content": "soccer team vr"
+    },
+    {
+      "id": 4,
+      "src": "images/desktop/image-grid",
+      "content": "the grid"
+    },
+    {
+      "id": 5,
+      "src": "images/desktop/image-from-above",
+      "content": "from up above vr"
+    },
+    {
+      "id": 6,
+      "src": "images/desktop/image-pocket-borealis",
+      "content": "pocket borealis"
+    },
+    {
+      "id": 7,
+      "src": "images/desktop/image-curiosity",
+      "content": "the curiosity"
+    },
+    {
+      "id": 8,
+      "src": "images/desktop/image-fisheye",
+      "content": "make it fisheye"
+    }
+  ]
 }
